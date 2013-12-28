@@ -1,0 +1,4 @@
+redirect /default.htm /simple7charvalidation.htm
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteRule \.(js|gif|jpg)$ - [F] 
