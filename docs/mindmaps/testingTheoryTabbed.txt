@@ -1,0 +1,98 @@
+Testing Process
+	What is Testing?
+	What is a Model?
+	What is an Input / Process / Output model?
+	What are the inputs to testing?
+	What is the difference between using software and testing software?
+	What is a bug?
+	How do we know we have found a bug?
+	How do bugs slip through to production?
+	White Box vs Black Box Testing
+	How do we know how to stop testing?
+	Are there techniques for helping me stop testing?
+	What is Domain Based Testing?
+	Making Text Notes for testing
+	What is Exploratory Testing
+	What is test coverage?
+	Negative & Positive Testing
+	What is Test Data?
+	Risks in Testing
+	What is Test Automation?
+	Tools in Testing
+
+Domain Modeling and Testing
+	What is an Input Domain?
+	What is an equivalence class?
+	What is Boundary Value Analysis?
+	Real World Boundary Value Analysis?
+	Why Boundary Value Analysis?
+	Why do we need to vary our data?
+	What is an input domain?
+		modeling in different ways - instructions, ascii sets
+		attributes, entities
+	How to test input? Invalid, Valid.
+	What is an output domain?
+		any output
+		output domains are often input domains
+	How to test output? Messages, Error messages.
+	What is the process domain?
+		states, entities
+	How to test process? Paths, Graphs.
+
+Model Tooling and Testing
+	Testing from Models - attributes, entities, graphs, states.
+	State Models
+	State based testing
+	Drawing Graphs Tools - GraphViz, online diagrammers, Xstate, etc.
+	Mind Map Tools
+
+Input Domain Text Models
+	What is Ascii?
+	Printable ascii, non-printable, extended ascii
+	Ascii Tables
+	What is Unicode?
+	Counterstrings
+
+Test Data
+	How to generate test data with Javascript
+	How to generate test data with spreadsheets
+
+Web Technology
+	Technology
+	Browsers
+	HTML
+	HTTP
+	Javascript
+	forms, input fields, buttons, events, eventhandlers as attributes, event listeners
+	Browser dev tools
+	triggering events from the console
+	manipulating the HTML dom HTML - elements, attributes, events, properties
+	Cross Browser
+	Why Cross Browser Testing?
+	Cookies, local storage etc.
+	HTML Validation - standards
+	What is an HTTP Proxy?
+
+Automating, Programming and Testing
+	Should testers be able to code?
+	Writing your own tools
+	How to Automate?
+	Reading Code
+	Version control systems
+	Github
+
+JavaScript in More Detail
+	What is Javascript?
+	the basics
+		strings
+		forEach
+		split,
+		join,
+		console.log,
+		functions,
+		arrow functions,
+		Array(7),
+		fill,
+		setinterval,
+	locating items using querySelector,
+	css queries
