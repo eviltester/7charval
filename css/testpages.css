@@ -9,6 +9,27 @@ body {
     font-variant: normal;
 }
 
+.github-link-container {
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+.github-link {
+    display: inline-flex;
+    padding: 6px;
+    color: #111111;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
 .page-body {
     margin-left: 1em;
     margin-right: 1em;
