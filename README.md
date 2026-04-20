@@ -18,6 +18,12 @@ Use the PowerShell script to generate images from diagram source files via the K
 .\scripts\generate-kroki-png.ps1
 ```
 
+Bash equivalent:
+
+```bash
+./scripts/generate-kroki-png.sh
+```
+
 By default it recursively processes files in `docs/examples`.
 
 Supported source extensions:
@@ -34,4 +40,18 @@ To use a different source root:
 
 ```powershell
 .\scripts\generate-kroki-png.ps1 -InputRoot "docs/examples/kroki"
+```
+
+```bash
+./scripts/generate-kroki-png.sh --input-root "docs/examples/kroki"
+```
+
+Generate Graphviz PNGs from all `.dot` files in `docs` recursively:
+
+```powershell
+.\scripts\generate-graphviz-png.ps1
+```
+
+```bash
+./scripts/generate-graphviz-png.sh
 ```
