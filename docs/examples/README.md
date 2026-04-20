@@ -68,6 +68,15 @@ Source: [likec4/likec4-input-process-output.c4](likec4/likec4-input-process-outp
 
 ## Mermaid
 
+### Inline Mermaid source example (GitHub-rendered)
+
+This is the source from `mermaid/mermaid-input-process-output.mmd`, embedded directly so GitHub can render it in the README:
+
+```mermaid
+flowchart LR
+    Input --> Process --> Output
+```
+
 ### 7charval state diagram
 
 State-oriented Mermaid diagram for valid/invalid/no-result transitions.
