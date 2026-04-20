@@ -9,6 +9,11 @@ I sometimes upload and amend the .htaccess file to ensure that the users can't a
 
 When written it didn't work on IE but did on Firefox to create a cross browser defect as well as the defects coded into the script.
 
+Documentation
+=============
+
+See the docs index: [docs/README.md](docs/README.md)
+
 Generate Kroki Example Images
 =============================
 
