@@ -1,0 +1,9 @@
+direction: right
+
+Start -> "Not Showing Result": start
+"Not Showing Result" -> "Invalid Value": check(invalid)
+"Not Showing Result" -> "Valid Value": check(valid)
+"Invalid Value" -> "Invalid Value": check(invalid)
+"Invalid Value" -> "Valid Value": check(valid)
+"Valid Value" -> "Invalid Value": check(invalid)
+"Valid Value" -> "Valid Value": check(valid)

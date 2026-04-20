@@ -1,0 +1,20 @@
+specification {
+  element system
+  element component
+}
+
+model {
+  process = system 'Process'
+  input = system 'Input'
+  output = system 'Output'
+
+  input -> process 'flows to'
+  process -> output 'flows to'
+}
+
+views {
+  view index {
+    include *
+    autoLayout LeftRight
+  }
+}

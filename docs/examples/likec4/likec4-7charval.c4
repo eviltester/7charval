@@ -1,0 +1,23 @@
+specification {
+  element system
+  element component
+}
+
+model {
+  start = system 'Start'
+  noResult = system 'Not Showing Result'
+  invalid = system 'Invalid Value'
+  valid = system 'Valid Value'
+}
+
+views {
+  dynamic view index {
+    start -> noResult 'start'
+    noResult -> invalid 'check(invalid)'
+    noResult -> valid 'check(valid)'
+    invalid -> invalid 'check(invalid)'
+    invalid -> valid 'check(valid)'
+    valid -> invalid 'check(invalid)'
+    valid -> valid 'check(valid)'
+  }
+}
