@@ -1,0 +1,34 @@
+digraph G {
+    rankdir=LR;
+    nodesep=0.8;
+    ranksep=1.1;
+    fontsize=12;
+    splines=spline;
+
+    Start;
+    NoResult [label="Not Showing Result"];
+
+    subgraph cluster_invalid {
+        label="Invalid Flow";
+        labelloc=b;
+        color=lightcoral;
+
+        Invalid [label="Invalid Value"];
+    }
+
+    subgraph cluster_valid {
+        label="Valid Flow";
+        labelloc=b;
+        color=lightgreen;
+
+        Valid [label="Valid Value"];
+    }
+
+    Start -> NoResult [label="start"];
+    NoResult -> Invalid [label="check(invalid)", color=red];
+    NoResult -> Valid [label="check(valid)", color=darkgreen];
+    Invalid -> Invalid [label="check(invalid)", color=red];
+    Invalid:sw -> Valid:nw [xlabel="to valid", color=darkgreen, style=dashed, constraint=false];
+    Valid:ne -> Invalid:se [xlabel="to invalid", color=red, style=dashed, constraint=false];
+    Valid -> Valid [label="check(valid)", color=darkgreen];
+}

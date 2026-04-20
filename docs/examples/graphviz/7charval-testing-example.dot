@@ -1,0 +1,10 @@
+digraph G {
+    rankdir=LR;
+    Start -> NoResult;
+    NoResult -> Invalid [label="check(invalid)"];
+    NoResult -> Valid [label="check(valid)"];
+    Invalid -> Invalid [label="check(invalid)"];
+    Invalid -> Valid [label="check(valid)"];
+    Valid -> Invalid [label="check(invalid)"];
+    Valid -> Valid [label="check(valid)"];
+}

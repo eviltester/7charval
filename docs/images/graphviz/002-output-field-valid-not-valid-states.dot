@@ -1,0 +1,39 @@
+digraph G {
+
+  compound=true
+  rankdir=LR;
+  
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    
+    no_result [label="Not Showing Result"]
+
+    label = "Output Field";
+    
+    
+    subgraph cluster_1 {
+        style=filled;
+        color=white;
+        node [style=filled,color=lightgrey];
+        
+        invalid_value [label="Invalid Value"]
+        valid_value [label="Valid Value"]
+        invalid_value -> invalid_value;
+        invalid_value -> valid_value;
+        valid_value -> invalid_value;
+        valid_value -> valid_value;
+        label = "Showing Result";
+    }
+    
+    no_result -> invalid_value [lhead=cluster_1];
+  
+  }
+  
+  start -> no_result
+  valid_value -> end [ltail=cluster_0,lhead=cluster_1];
+ 
+  start [shape=Mdiamond];
+  end [shape=Msquare];
+}

@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*] --> NoResult: start
+    NoResult --> Invalid: check(invalid)
+    NoResult --> Valid: check(valid)
+    Invalid --> Invalid: check(invalid)
+    Invalid --> Valid: check(valid)
+    Valid --> Invalid: check(invalid)
+    Valid --> Valid: check(valid)

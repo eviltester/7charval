@@ -1,0 +1,54 @@
+digraph G {
+
+  compound=true
+  rankdir=LR;
+  
+  start [shape=Mdiamond];
+    
+ subgraph cluster0{
+      
+  subgraph cluster_input{
+      
+      empty -> has_value;
+      has_value -> empty;
+      has_value [label="has value"]
+      label ="Input Field"
+  }
+    
+  subgraph cluster_output {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    
+    no_result [label="Not Showing Result"]
+
+    label = "Output Field";
+    
+    subgraph cluster_result {
+        style=filled;
+        color=white;
+        node [style=filled,color=lightgrey];
+        
+        invalid_value [label="Invalid Value"]
+        valid_value [label="Valid Value"]
+        invalid_value -> invalid_value;
+        invalid_value -> valid_value;
+        valid_value -> invalid_value;
+        valid_value -> valid_value;
+        label = "Showing Result";
+    }
+    
+    no_result -> invalid_value [lhead=cluster_result];
+  }
+ }
+  
+
+  start -> empty;
+  has_value -> end [ltail=cluster_input];
+
+  start -> no_result;
+  valid_value -> end [ltail=cluster_output];
+
+ 
+  end [shape=Msquare];
+}

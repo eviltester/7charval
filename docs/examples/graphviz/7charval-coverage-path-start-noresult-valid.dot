@@ -1,0 +1,13 @@
+digraph G {
+    rankdir=LR;
+    NoResult -> Invalid [label="check(invalid)"];
+    Invalid -> Invalid [label="check(invalid)"];
+    Invalid -> Valid [label="check(valid)"];
+    Valid -> Invalid [label="check(invalid)"];
+    Valid -> Valid [label="check(valid)"];
+
+    // covered path highlighted in red:
+    // Start -> NoResult -> check(valid) -> Valid
+    Start -> NoResult [color=red, penwidth=3, fontcolor=red];
+    NoResult -> Valid [label="check(valid)", color=red, penwidth=3, fontcolor=red];
+}
