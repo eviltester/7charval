@@ -30,6 +30,10 @@ jobs:
         run: |
           mkdir -p _site
           cp simple7charvalidation.htm _site/index.html
+          if [ -f "css/testpages.css" ]; then
+            mkdir -p _site/css
+            cp css/testpages.css _site/css/
+          fi
           for f in validationfunctionso.js validationfunctions.js .htaccess README.md LICENSE; do
             if [ -f "$f" ]; then
               cp "$f" _site/
