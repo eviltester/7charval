@@ -1,0 +1,24 @@
+digraph G {
+
+  compound=true
+  rankdir=LR;
+  
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    
+    no_result [label="Not Showing Result"]
+    showing_result [label="Showing Result"]
+    no_result -> showing_result;
+    showing_result -> showing_result
+    label = "Output Field";
+  }
+
+  start -> no_result
+  
+  showing_result -> end [ltail=cluster_0,lhead=cluster_1];
+ 
+  start [shape=Mdiamond];
+  end [shape=Msquare];
+}
